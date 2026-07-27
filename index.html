@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+    <title>パソコン振り返り</title>
+</head>
+
+<body class="container">
+    <header id="mog">
+        <h1>大学生のための情報・デジタルリテラシー復習１　表とリスト</h1>
+        <nav>
+            ホーム
+            タグリファレンス
+            問い合わせ
+            <a href="b.html" target="_blank">復習２</a>
+            <a href="a.html" target="_blank">小テスト</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>序盤操作方法</h2>
+            <ol>
+                <li>htmlと入力し、html：5を選択</li>
+                <li>enをjpに変更</li>
+                <li>headのタイトル入力</li>
+                <li>bodyの中にheaderとmainとfooterを作る</li>
+                <li>mainの中にsectionを作り、作成を開始する</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>その他基本タグ</h3>
+            <dl>
+                <dt>nav</dt>
+                <dd>リンクをまとめたもの</dd>
+            </dl>
+            <dl>
+                <dt>h1～h6</dt>
+                <dd>見出し。数字が小さいほうがサイズが大きくなる。</dd>
+            </dl>
+            <dl>
+                <dt>p</dt>
+                <dd>段落。普通のテキストみたいな感じ。</dd>
+            </dl>
+        </section>
+    </main>
+
+    <section class="hyou">
+        <h2>表の作り方</h2>
+        <ol>
+            <li>headタグの中に罫線表示のおまじないを入力</li>
+            <li>tableタグを入力</li>
+            <li>中にcaptionタグを作成、表のタイトルを入力</li>
+            <li>tr(行)タグを作り、中にth(項目列)タグを作って項目名を入力</li>
+            <li>上から下へ表の行を追加していく</li>
+            <li>通常セルのタグはtd</li>
+        </ol>
+        <h3>表の結合方法</h3>
+        <dl>
+            <dt>colspan</dt>
+            <dd>横の列を結合できる属性。属性なので、タグの＜＞の中に直接入れ込む。""は結合セル数。結合するので、元のtdタグは消去する必要がある。</dd>
+        </dl>
+        <dl>
+            <dt>rowspan</dt>
+            <dd>縦の列を結合できる属性。あとはrowspanと同じ</dd>
+        </dl>
+        <table>
+            <caption>見本</caption>
+            <tr>
+                <th>(tr)</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+            </tr>
+            <tr>
+                <th>th</th>
+                <td>td</td>
+                <td>td</td>
+                <td>td</td>
+            </tr>
+            <tr>
+                <th>th</th>
+                <td colspan="2">col</td>
+                <td rowspan="2">row</td>
+            </tr>
+            <tr>
+                <th>th</th>
+                <td colspan="2" rowspan="2">col+row</td>
+            </tr>
+            <tr>
+                <th>th</th>
+                <td>td</td>
+            </tr>
+        </table>
+
+    </section>
+
+    <section class="list">
+        <h2>リストの作り方</h2>
+        <dl>
+            <dt>箇条書き</dt>
+            <dd>
+                <ol>
+                    <li>ulタグを作成</li>
+                    <li>中にliタグを作って単語を入力</li>
+                </ol>
+            </dd>
+            <dt>番号振り</dt>
+            <dd>
+                <ol>
+                    <li>olタグ作成</li>
+                    <li>中にli</li>
+                </ol>
+            </dd>
+            <dt>単語説明</dt>
+            <dd>
+                <ol>
+                    <li>dtタグ作成</li>
+                    <li>中にdtタグを作り、単語を入力</li>
+                    <li>ddタグを作り、説明を入力</li>
+                </ol>
+            </dd>
+        </dl>
+    </section>
+
+    <section class="miho">
+        <h3>見本</h3>
+        <h4>箇条書き</h4>
+        <ul>
+            <li>ul</li>
+            <li>li</li>
+            <li>li</li>
+        </ul>
+        <h4>番号振り</h4>
+        <ol>
+            <li>ol</li>
+            <li>li</li>
+            <li>li</li>
+        </ol>
+        <h4>単語説明</h4>
+        <dl>
+            <dt>dl➡dt</dt>
+            <dd>ddがここにあるよ～～～ん</dd>
+            <dt>dt</dt>
+            <dd>ddですよ～～～～ん</dd>
+        </dl>
+
+
+        <button onclick="aisatsu(1)">みえてるよ</button>
+
+        <p><a href="#mog">トップに戻る</a></p>
+
+    </section>
+
+    <aside>
+        <section>
+            <h2>☆覚えておくべきショートカットたち</h2>
+            <dl>
+                <dt>ctrl＋S</dt>
+                <dd>保存する。白丸だと保存されていないので、保存して×にする必要がある。</dd>
+                <dt>Shift＋Alt＋↓</dt>
+                <dd>選択している行を下に複製できる。めちゃくちゃ便利</dd>
+                <dt>Shift＋Alt＋F</dt>
+                <dd>ぐちゃぐちゃのプログラムコードを綺麗にしてくれる</dd>
+            </dl>
+        </section>
+
+    </aside>
+
+
+
+
+
+    <footer>
+        Copyright &copy; Yasuka MIYAGAWA, All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
