@@ -534,8 +534,15 @@
                 </div>
 
                 <div>
-                    <input type="submit" value="送信">
+                    <input id="send_data" type="submit" value="送信">
                     <input type="reset" value="リセット">
+                </div>
+
+                <h3>受信データ</h3>
+                <div>
+                    氏名：
+                    <span id="display-surname"></span>
+                    <span id="display-firstname"></span>
                 </div>
 
                 <h2>うまくできましたか？？</h2>
@@ -545,10 +552,9 @@
                 <button onclick="kakunin(2)">やってない</button>
 
                 <p id="kakukaku">わくわく</p>
-            </div>
 
-            <p><a href="#mon">もう一度解く：タグ一覧</a></p>
-            <p><a href="#monge">もう一度解く：項目別</a></p>
+                <p><a href="#mon">もう一度解く：タグ一覧</a></p>
+                <p><a href="#monge">もう一度解く：項目別</a></p>
 
         </section>
 
@@ -572,7 +578,7 @@
         </footer>
 
         <script>
-            document.getElementById("send-data").onclick = function () {
+            document.getElementById("send_data").onclick = function () {
                 // フォームの値を取得
                 const surname = document.getElementById("lastname").value;
                 const firstname = document.getElementById("firstname").value;
